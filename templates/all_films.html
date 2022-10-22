@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все фильмы</title>
+</head>
+<body>
+<div>
+    {%  for film in film %}
+        <h2><a href="{{ film.id }}"></a>Название:{{ film.name }}</h2>
+{#        <h2>{{ film.name }}</h2>#}
+        <p>{{ film.author }}</p>
+        <p>{{ film.rating }}</p>
+        <p>{{ film.duration }}</p>
+    {% endfor %}
+</div>
+</body>
+</html>
