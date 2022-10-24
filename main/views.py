@@ -19,3 +19,9 @@ def films(request):
 def films_detail(request, id):
     detail = get_object_or_404(models.Film, id=id)
     return render(request, 'films_detail.html', {'detail':detail})
+
+
+
+def director_films(request, id):
+    direct = get_object_or_404(models.Film, id = id)
+    return render(request, 'director_id.html', {'director':direct})
