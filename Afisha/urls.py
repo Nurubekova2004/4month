@@ -10,6 +10,7 @@ from main import views
 urlpatterns = (
     [
     path('admin/', admin.site.urls),
+    path('', views.welcome),
     path('about_us/', views.about_us ),
     path('date_now/', views.date_now ),
     path('', include('main.urls'))

@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div>
-    <h2>название:{{ director.name }}</h2>
-    <p2>Автор:{{ director.author }}</p2>
-    <p2>Автор:{{ director.rating }}</p2>
-    <p2>Автор:{{ director.duration }}</p2>
-</div>
-</body>
-</html>
-
+{% extends 'base.html' %}
+{% block content %}
+    {% for director in directors %}
+        <a href="/director/{{ director.id }}/films/"><h3>{{ director.name }}</h3></a>
+    {% endfor %}
+{% endblock %}
 
 
